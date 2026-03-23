@@ -6,8 +6,10 @@ data = json.load(pokedex)
 print(data[0])
 
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
-for index, item in enumerate(data):
-    print('name', ":",)
+x=0
+while x < 809:
+    print(data[x]["name"])
+    x += 1
 
 
 # Add a language choice feature and print the pokemons name based on the user input

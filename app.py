@@ -13,7 +13,15 @@ while x < 809:
 
 
 # Add a language choice feature and print the pokemons name based on the user input
-
+import json
+pokedex = open("./pokedex.json", encoding="utf8")
+data = json.load(pokedex)
+print(data[0])
+x=0
+while x < 809:
+    print(data[x]["name"])
+    x += 1
+y = int(input("what language"))
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 

@@ -39,7 +39,7 @@ wards = {
 
 
 staff = {}
-def dept(ward):
-    ward = wards
-    for ward, staff in ward.items():
-        print(ward,staff)
+
+for dept, docs in wards.items():
+    print(dept, docs)
+    for doc in docs:

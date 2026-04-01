@@ -1,19 +1,45 @@
-sushi_orders = [
-    {"name": "California Roll", "price": 8},
-    {"name": "Spicy Tuna Roll", "price": 10},
-    {"name": "Salmon Nigiri", "price": 6},
-    {"name": "California Roll", "price": 8},
-    {"name": "Dragon Roll", "price": 12},
-    {"name": "Spicy Tuna Roll", "price": 10},
-    {"name": "Miso Soup", "price": 4},
-    {"name": "Edamame", "price": 5},
-    {"name": "Salmon Nigiri", "price": 6},
-    {"name": "California Roll", "price": 8}
-]
+# sushi_orders = [
+#     {"name": "California Roll", "price": 8},
+#     {"name": "Spicy Tuna Roll", "price": 10},
+#     {"name": "Salmon Nigiri", "price": 6},
+#     {"name": "California Roll", "price": 8},
+#     {"name": "Dragon Roll", "price": 12},
+#     {"name": "Spicy Tuna Roll", "price": 10},
+#     {"name": "Miso Soup", "price": 4},
+#     {"name": "Edamame", "price": 5},
+#     {"name": "Salmon Nigiri", "price": 6},
+#     {"name": "California Roll", "price": 8}
+# ]
 
-def receipt(orders):
-    receipt = {}
-    for order in orders:
-        if order['name'] in receipt:
-            print("name","price")
-receipt(sushi_orders)
+# def receipt(orders):
+#     the_receipt = {}
+#     for sushi in orders:
+#         if sushi['name'] in receipt:
+#             the_receipt[sushi['name']]['qty'] += 1
+#         else:
+#             the_receipt[sushi['name']] = {
+#                 'price': sushi['price'],
+#                 "qty": 1
+#             }
+#     for sushi, value in the_receipt.items():
+#         price = value['price'] * value['qty']
+#         print(sushi, value['qty'], price)
+
+# receipt(sushi_orders)
+
+
+
+
+wards = {
+    "Cardiology":  ["Alice", "Bob", "Carol"],
+    "Neurology":   ["Diana", "Eve"],
+    "Orthopedics": ["Frank", "Grace", "Hank"],
+    "Oncology":    ["Ivy", "Bob"]
+}
+
+
+staff = {}
+def dept(ward):
+    ward = wards
+    for ward, staff in ward.items():
+        print(ward,staff)

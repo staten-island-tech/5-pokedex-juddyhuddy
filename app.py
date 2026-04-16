@@ -53,7 +53,7 @@ while x < 809:
         x+=1
     else:
         print("pokemon not found")       
-        x+=1
+       
 
 
     

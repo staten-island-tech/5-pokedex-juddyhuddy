@@ -13,9 +13,9 @@
 
 
 # Add a language choice feature and print the pokemons name based on the user input
-# import json
-# pokedex = open("./pokedex.json", encoding="utf8")
-# data = json.load(pokedex)
+import json
+pokedex = open("./pokedex.json", encoding="utf8")
+data = json.load(pokedex)
 # print(data[0])
 # x=0
 # while x < 809:
@@ -43,9 +43,17 @@
     
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
-#For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
+#For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has available based on type
 pokemon = (input("which pokemon"))
-if pokemon == "charizard":
-    print("charizard")
-else:
-    print("pokemon not found")
+x=0
+
+while x < 809:
+    if pokemon == (data[x]["name"]["english"]): 
+        print(data[x]["name"]["english"])
+        x+=1
+    else:
+        print("pokemon not found")       
+        x+=1
+
+
+    

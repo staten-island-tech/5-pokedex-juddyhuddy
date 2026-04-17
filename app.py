@@ -14,8 +14,8 @@
 
 # Add a language choice feature and print the pokemons name based on the user input
 import json
-pokedex = open("./pokedex.json", encoding="utf8")
-data = json.load(pokedex)
+moves = open("./moves.json", encoding="utf8")
+data = json.load(moves)
 # print(data[0])
 # x=0
 # while x < 809:
@@ -41,20 +41,24 @@ data = json.load(pokedex)
 #     x += 1
 
     
-#Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
-
-#For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has available based on type
-pokemon = (input("which pokemon"))
-x=0
-
-while x < 809:
-    if pokemon == (data[x]["name"]["english"]): 
-        print(data[x]["name"]["english"])
-        x+=1
-
-    elif x == 809 and pokemon != data[x]["name"]["english"]:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-        print("pokemon not found")       
-       
+# #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
 
-    
+# pokemon = (input("which pokemon")).capitalize()
+# x=0
+
+
+# for poke in data:
+#     if pokemon in poke['name']['english']:
+#         print(poke['name']['english'])
+#     else:
+#         x += 1
+#     if x > 808:
+#         print("none Found!")
+ #
+ # 
+ # 
+ # For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has available based on type
+
+pokemon = (input("what type")).capitalize()
+print(data)

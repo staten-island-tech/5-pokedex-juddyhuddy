@@ -1,8 +1,8 @@
-# import json
+import json
 # ## Open the JSON file of pokemon data
-# pokedex = open("./pokedex.json", encoding="utf8")
+pokedex = open("./pokedex.json", encoding="utf8")
 # ## create variable "data" that represents the enitre pokedex list
-# data = json.load(pokedex)
+pokemons = json.load(pokedex)
 # print(data[0])
 
 # # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
@@ -13,7 +13,6 @@
 
 
 # Add a language choice feature and print the pokemons name based on the user input
-import json
 moves = open("./moves.json", encoding="utf8")
 data = json.load(moves)
 # print(data[0])
@@ -60,5 +59,18 @@ data = json.load(moves)
  # 
  # For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has available based on type
 
-pokemon = (input("what type")).capitalize()
-print(data)
+pokemon = (input("what pokemon")).capitalize()
+types = []
+abilites = []
+for poke in pokemons:
+    if pokemon in poke['name']['english']:
+        for type in poke['type']:
+            types.append(type)
+
+for poke_type in types:
+    for move in data['type']:
+        if poke_type in move:
+            abilites.append(data['ename'])
+
+print(type)
+print(abilites)

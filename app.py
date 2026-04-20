@@ -66,11 +66,8 @@ for poke in pokemons:
     if pokemon in poke['name']['english']:
         for type in poke['type']:
             types.append(type)
-
-for poke_type in types:
-    for move in data['type']:
-        if poke_type in move:
-            abilites.append(data['ename'])
-
-print(type)
+for poke_types in types:
+    for move in data:
+        if poke_types in move['type']:
+            abilites.append(move['ename'])
 print(abilites)

@@ -52,7 +52,7 @@ data = json.load(moves)
 #         print(poke['name']['english'])
 #     else:
 #         x += 1
-#     if x > 808:
+#     if x > 808:p
 #         print("none Found!")
  #
  # 
@@ -71,3 +71,5 @@ for poke_types in types:
         if poke_types in move['type']:
             abilites.append(move['ename'])
 print(abilites)
+
+# sign out next time or i wont have mercy

@@ -72,4 +72,3 @@ for poke_types in types:
             abilites.append(move['ename'])
 print(abilites)
 
-# sign out next time or i wont have mercy
